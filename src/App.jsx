@@ -20,6 +20,7 @@ import {
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 function App() {
+  // These functions are from Rtk query, I am not invoking them just passing them to reusable component
   const getComponent1DataQuery = useGetcomponent1DataQuery;
   const createComponent1DataMutation = useCreateComponent1DataMutation;
   const getComponent1CountsQuery = useGetcomponent1CountsQuery;
@@ -30,6 +31,8 @@ function App() {
   const createComponent3DataMutation = useCreateComponent3DataMutation;
   const getComponent3CountsQuery = useGetcomponent3CountsQuery;
   return (
+    // Using React grid Layout for responsive divs
+
     <ResponsiveGridLayout
       className="layout"
       layouts={layouts}
@@ -42,6 +45,7 @@ function App() {
       width={1200}>
       <div key="a" className="component">
         <div className="content">
+          {/* Reusable component */}
           <Component
             getDataQuery={getComponent1DataQuery}
             createDataMutation={createComponent1DataMutation}
